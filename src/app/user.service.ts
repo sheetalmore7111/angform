@@ -6,29 +6,29 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  // domain:any = 'http://localhost:3000/'
-  domain:any = 'https://github.com/sheetalmore7111/IVTASK-RraectForm/'
+  domain:any = 'https://users-api-qbc4.onrender.com/contact/'
+  // domain:any = 'https://github.com/sheetalmore7111/IVTASK-RraectForm/'
   
   constructor(private http:HttpClient) { }
 
   getAllUsers(){
-    return this.http.get(`${this.domain}user`)
+    return this.http.get(`${this.domain}contacts`)
   }
 
   addUsers(body:any){
-    return this.http.post(`${this.domain}user/`, body)
+    return this.http.post(`${this.domain}createContact`, body)
   }
 
   deleteUser(id:number){
-    return this.http.delete(`${this.domain}user/`+id )
+    return this.http.delete(`${this.domain}delete/`+id )
   }
 
   getUserById(id:any){
-    return this.http.get(`${this.domain}user/`+id);
+    return this.http.get(`${this.domain}contacts/`+id);
   }
 
   updateUser(id:any,body:any){
-    return this.http.put(`${this.domain}user/`+id ,body);
+    return this.http.put(`${this.domain}update/`+id ,body);
   }
 
 }

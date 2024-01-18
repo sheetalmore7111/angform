@@ -25,13 +25,13 @@ export class ReactiveformComponent implements OnInit {
 
     this.userForm = this.fb.group({
       firstName :['', [Validators.required]],
-      lastName :['', [Validators.required]],
-      email :['', [Validators.required, Validators.email]],
-      phone :['', [Validators.required]],
+      userRole :['', [Validators.required]],
+      emailId :['', [Validators.required, Validators.email]],
+      contact :['', [Validators.required]],
       company :['', [Validators.required]],
       dob:['', [Validators.required]],
       gender:['', []],
-      password :['', [Validators.required]],
+      designation :['', [Validators.required]],
       confirmPassword :['', [Validators.required]]
       
     })

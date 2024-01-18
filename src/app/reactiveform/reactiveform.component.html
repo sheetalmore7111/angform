@@ -14,24 +14,24 @@
         </tr>
         <tr>
             <td> Last Name </td>
-            <td><input type="text" name="" id="" formControlName="lastName" required>
-                <div *ngIf="userForm.get('lastName').hasError('required') && userForm.get('lastName').touched">
+            <td><input type="text" name="" id="" formControlName="userRole" required>
+                <div *ngIf="userForm.get('userRole').hasError('required') && userForm.get('userRole').touched">
                     Last Name is required.
                 </div>
             </td>
         </tr>
         <tr>
             <td>Email </td>
-            <td><input type="email" name="email" id="email" formControlName="email" required email>
-                <div *ngIf="userForm.get('email').hasError('required') && userForm.get('email').touched">
+            <td><input type="email" name="emailId" id="emailId" formControlName="emailId" required email>
+                <div *ngIf="userForm.get('emailId').hasError('required') && userForm.get('emailId').touched">
                     Email is is required.
                 </div>
             </td>
         </tr>
         <tr>
             <td>Phone No </td>
-            <td><input type="text" name="" id="" formControlName="phone" required>
-                <div *ngIf="userForm.get('phone').hasError('required') && userForm.get('phone').touched">
+            <td><input type="text" name="" id="" formControlName="contact" required>
+                <div *ngIf="userForm.get('contact').hasError('required') && userForm.get('contact').touched">
                     Phone Number is required.
                 </div>
             </td>
@@ -61,8 +61,8 @@
         </tr>
         <tr>
             <td>Password </td>
-            <td><input type="password" name="" id="" formControlName="password" required>
-                <div *ngIf="userForm.get('password').hasError('required') && userForm.get('password').touched">
+            <td><input type="password" name="" id="" formControlName="designation" required>
+                <div *ngIf="userForm.get('designation').hasError('required') && userForm.get('designation').touched">
                     Password is required.
                 </div>
             </td>
@@ -99,9 +99,9 @@
     </tr>
     <tr *ngFor="let person of user">
         <td>{{person.firstName}}</td>
-        <td>{{person.lastName}}</td>
-        <td>{{person.email}}</td>
-        <td>{{person.phone}}</td>
+        <td>{{person.userRole}}</td>
+        <td>{{person.emailId}}</td>
+        <td>{{person.contact}}</td>
         <td>{{person.company}}</td>
         <td>{{person.dob}}</td>
         <td><button (click)="getUserById(person.id)">Edit</button></td>
